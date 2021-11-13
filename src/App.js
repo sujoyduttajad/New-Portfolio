@@ -10,10 +10,10 @@ import BlogsPage from './Pages/BlogsPage';
 import ContactPage from './Pages/ContactPage';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Route, Swi } from "react-router-dom";
-import Switch from '@material-ui/core/Switch'
-import { IconButton } from "@material-ui/core";
 
+import {Switch as SwitchComponent} from '@material-ui/core'
+import { IconButton } from "@material-ui/core";
+import { Switch, Route } from "react-router";
 
 function App() {
   const [theme, setTheme] = useState('dark-theme');
@@ -44,7 +44,7 @@ function App() {
                 <Brightness4Icon />
               </div>
               <div className="right-content">
-                <Switch
+                <SwitchComponent
                   value=""
                   checked={checked}
                   inputProps={{ 'aria-label': '' }}
@@ -70,7 +70,7 @@ function App() {
             <div className="line-4"></div>
           </div>
 
-          <Switch>
+          {/* <Switch> */}
             <Route path="/" exact>
               <HomePage />
             </Route>
@@ -89,7 +89,7 @@ function App() {
             <Route path="/contact" exact>
               <ContactPage />
             </Route>
-          </Switch>
+          {/* </Switch> */}
 
         </MainContentStyled>
     </div>
