@@ -1,6 +1,5 @@
 
-import { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Sidebar from "./Components/Sidebar";
 import styled from 'styled-components';
 import HomePage from "./Pages/HomePage";
@@ -11,7 +10,7 @@ import BlogsPage from './Pages/BlogsPage';
 import ContactPage from './Pages/ContactPage';
 import Brightness4Icon from '@material-ui/icons/Brightness4';
 import MenuIcon from '@material-ui/icons/Menu';
-import { Route, Switch as Switching } from "react-router";
+import { Route, Swi } from "react-router-dom";
 import Switch from '@material-ui/core/Switch'
 import { IconButton } from "@material-ui/core";
 
@@ -71,7 +70,7 @@ function App() {
             <div className="line-4"></div>
           </div>
 
-          <Switching>
+          <Switch>
             <Route path="/" exact>
               <HomePage />
             </Route>
@@ -90,7 +89,7 @@ function App() {
             <Route path="/contact" exact>
               <ContactPage />
             </Route>
-          </Switching>
+          </Switch>
 
         </MainContentStyled>
     </div>
